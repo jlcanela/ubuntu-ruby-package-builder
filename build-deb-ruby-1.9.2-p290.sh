@@ -8,7 +8,7 @@ destdir=/tmp/install-$rubyversion
 sudo apt-get -y install libssl-dev
 
 if [ ! -f $rubysrc ]; then
-  wget -q ftp://ftp.ruby-lang.org/pub/ruby/1.9/$rubysrc
+  wget -q http://cache.ruby-lang.org/pub/ruby/1.9/$rubysrc
 fi
 
 if [ "$(md5sum $rubysrc | cut -b1-32)" != "$checksum" ]; then

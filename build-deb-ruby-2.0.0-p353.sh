@@ -10,7 +10,7 @@ destdir=/tmp/install-$rubyversion
 sudo apt-get -y install libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev libxml2-dev libxslt1-dev automake libtool libc6-dev
 
 if [ ! -f $rubysrc ]; then
-    wget -q ftp://ftp.ruby-lang.org/pub/ruby/2.0/$rubysrc
+    wget -q http://cache.ruby-lang.org/pub/ruby/2.0/$rubysrc
 fi
 
 if [ "$(md5sum $rubysrc | cut -b1-32)" != "$checksum" ]; then

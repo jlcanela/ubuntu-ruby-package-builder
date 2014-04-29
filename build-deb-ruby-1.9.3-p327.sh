@@ -10,7 +10,7 @@ destdir=/tmp/install-$rubyversion
 sudo apt-get -y install libssl-dev libreadline-dev zlib1g-dev libyaml-dev libgdbm-dev libffi-dev libncurses5-dev
 
 if [ ! -f $rubysrc ]; then
-  wget -q ftp://ftp.ruby-lang.org/pub/ruby/1.9/$rubysrc
+  wget -q http://cache.ruby-lang.org/pub/ruby/1.9/$rubysrc
 fi
 
 if [ "$(md5sum $rubysrc | cut -b1-32)" != "$checksum" ]; then
